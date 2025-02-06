@@ -5,7 +5,7 @@ baseurl: "/dungeoneers" # Make sure this matches your repository name
 url: "https://yourusername.github.io" # Replace with your GitHub username
 
 # Theme settings
-remote_theme: just-the-docs/just-the-docs
+remote_theme: "just-the-docs/just-the-docs@v0.7.0"  # Specify the version
 color_scheme: dark
 logo: "/assets/images/logo.png" # Optional - remove if you don't have a logo
 
@@ -35,10 +35,6 @@ nav_external_links:
 # Back to top link
 back_to_top: true
 back_to_top_text: "Back to top"
-
-# Theme settings
-theme: just-the-docs
-remote_theme: just-the-docs/just-the-docs@v0.7.0  # Specify the version
 
 # Footer content
 footer_content: "Copyright &copy; 2024. Distributed under MIT license."
