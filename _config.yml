@@ -23,13 +23,13 @@ search:
 # Aux links (shown in upper right)
 aux_links:
   "View on GitHub":
-    - "//github.com/yourusername/dungeoneers"
+    - "//github.com/tkvalton/dungeoneers"
 aux_links_new_tab: true
 
 # Navigation
 nav_external_links:
   - title: Dungeoneers on GitHub
-    url: https://github.com/yourusername/dungeoneers
+    url: https://github.com/tkvalton/dungeoneers
     hide_icon: false
 
 # Back to top link
