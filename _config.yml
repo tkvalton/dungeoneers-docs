@@ -1,0 +1,63 @@
+# Site settings
+title: Dungeoneers Documentation
+description: Documentation for the Dungeoneers game systems and classes
+baseurl: "/dungeoneers" # Make sure this matches your repository name
+url: "https://yourusername.github.io" # Replace with your GitHub username
+
+# Theme settings
+remote_theme: just-the-docs/just-the-docs
+color_scheme: dark
+logo: "/assets/images/logo.png" # Optional - remove if you don't have a logo
+
+# Search settings
+search_enabled: true
+search:
+  heading_level: 2
+  previews: 3
+  preview_words_before: 5
+  preview_words_after: 10
+  tokenizer_separator: /[\s/]+/
+  rel_url: true
+  button: true
+
+# Aux links (shown in upper right)
+aux_links:
+  "View on GitHub":
+    - "//github.com/yourusername/dungeoneers"
+aux_links_new_tab: true
+
+# Navigation
+nav_external_links:
+  - title: Dungeoneers on GitHub
+    url: https://github.com/yourusername/dungeoneers
+    hide_icon: false
+
+# Back to top link
+back_to_top: true
+back_to_top_text: "Back to top"
+
+# Theme settings
+theme: just-the-docs
+remote_theme: just-the-docs/just-the-docs@v0.7.0  # Specify the version
+
+# Footer content
+footer_content: "Copyright &copy; 2024. Distributed under MIT license."
+
+# Build settings
+markdown: kramdown
+exclude: ["*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
+
+# Collections for different documentation sections
+collections:
+  gameplay:
+    permalink: "/:collection/:path/"
+    output: true
+  systems:
+    permalink: "/:collection/:path/"
+    output: true
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-remote-theme
+  - jekyll-seo-tag
