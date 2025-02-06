@@ -3,7 +3,7 @@ layout: default
 title: Entity System
 nav_order: 2
 has_children: true
-permalink: /systems/entities
+permalink: /systems/entities/
 ---
 
 # Entity System

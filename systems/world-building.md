@@ -3,7 +3,7 @@ layout: default
 title: World Building Tools
 nav_order: 4
 has_children: true
-permalink: /systems/world-building
+permalink: /systems/world-building/
 ---
 
 # World Building Tools

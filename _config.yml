@@ -1,13 +1,12 @@
 # Site settings
 title: Dungeoneers Documentation
 description: Documentation for the Dungeoneers game systems and classes
-baseurl: "/dungeoneers" # Make sure this matches your repository name
-url: "https://yourusername.github.io" # Replace with your GitHub username
+baseurl: "/dungeoneers-docs" # Make sure this matches your repository name
+url: "https://tkvalton.github.io" # Replace with your GitHub username
 
 # Theme settings
 remote_theme: "just-the-docs/just-the-docs@v0.7.0"  # Specify the version
 color_scheme: dark
-logo: "/assets/images/logo.png" # Optional - remove if you don't have a logo
 
 # Search settings
 search_enabled: true
@@ -41,17 +40,20 @@ footer_content: "Copyright &copy; 2024. Distributed under MIT license."
 
 # Build settings
 markdown: kramdown
+include:
+  - assets
+  - systems
 exclude: ["*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
 
 # Custom CSS
 sass:
-  load_paths:
-    - _sass
+  sass_dir: assets/css
   style: compressed
 
 # Include custom CSS
 include:
-  - assets/css/custom.css
+  - _sass
+  - assets
 
 # Collections for different documentation sections
 collections:

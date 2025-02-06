@@ -3,7 +3,7 @@ layout: default
 title: Abilities & Effects
 nav_order: 3
 has_children: true
-permalink: /systems/abilities
+permalink: /systems/abilities/
 ---
 
 # Abilities & Effects System

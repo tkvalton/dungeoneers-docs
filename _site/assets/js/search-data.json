@@ -1,0 +1,170 @@
+{"0": {
+    "doc": 404,
+    "title": "404",
+    "content": " ",
+    "url": "/dungeoneers-docs/404.html",
+    
+    "relUrl": "/404.html"
+  },"1": {
+    "doc": 404,
+    "title": "Page not found :(",
+    "content": "The requested page could not be found. Return to home page . ",
+    "url": "/dungeoneers-docs/404.html",
+    
+    "relUrl": "/404.html"
+  },"2": {
+    "doc": 404,
+    "title": 404,
+    "content": " ",
+    "url": "/dungeoneers-docs/404.html",
+    
+    "relUrl": "/404.html"
+  },"3": {
+    "doc": "Abilities & Effects",
+    "title": "Abilities &amp; Effects System",
+    "content": " ",
+    "url": "/dungeoneers-docs/systems/abilities/#abilities--effects-system",
+    
+    "relUrl": "/systems/abilities/#abilities--effects-system"
+  },"4": {
+    "doc": "Abilities & Effects",
+    "title": "Overview",
+    "content": "The Abilities &amp; Effects System handles all powers, skills, and status effects. ",
+    "url": "/dungeoneers-docs/systems/abilities/#overview",
+    
+    "relUrl": "/systems/abilities/#overview"
+  },"5": {
+    "doc": "Abilities & Effects",
+    "title": "Components",
+    "content": ". | Ability Base Class | Effect System | Status Management | . ",
+    "url": "/dungeoneers-docs/systems/abilities/#components",
+    
+    "relUrl": "/systems/abilities/#components"
+  },"6": {
+    "doc": "Abilities & Effects",
+    "title": "Implementation Details",
+    "content": "[Documentation to be added] . ",
+    "url": "/dungeoneers-docs/systems/abilities/#implementation-details",
+    
+    "relUrl": "/systems/abilities/#implementation-details"
+  },"7": {
+    "doc": "Abilities & Effects",
+    "title": "Examples",
+    "content": "[Code examples to be added] . ",
+    "url": "/dungeoneers-docs/systems/abilities/#examples",
+    
+    "relUrl": "/systems/abilities/#examples"
+  },"8": {
+    "doc": "Abilities & Effects",
+    "title": "Abilities & Effects",
+    "content": " ",
+    "url": "/dungeoneers-docs/systems/abilities/",
+    
+    "relUrl": "/systems/abilities/"
+  },"9": {
+    "doc": "About",
+    "title": "About",
+    "content": "This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at jekyllrb.com . You can find the source code for Minima at GitHub: jekyll / minima . You can find the source code for Jekyll at GitHub: jekyll / jekyll . ",
+    "url": "/dungeoneers-docs/about/",
+    
+    "relUrl": "/about/"
+  },"10": {
+    "doc": "Entity System",
+    "title": "Entity System",
+    "content": " ",
+    "url": "/dungeoneers-docs/systems/entities/",
+    
+    "relUrl": "/systems/entities/"
+  },"11": {
+    "doc": "Entity System",
+    "title": "Overview",
+    "content": "The Entity System manages all game objects within Dungeoneers. ",
+    "url": "/dungeoneers-docs/systems/entities/#overview",
+    
+    "relUrl": "/systems/entities/#overview"
+  },"12": {
+    "doc": "Entity System",
+    "title": "Components",
+    "content": ". | Entity Base Class | Entity Types | Entity Manager | . ",
+    "url": "/dungeoneers-docs/systems/entities/#components",
+    
+    "relUrl": "/systems/entities/#components"
+  },"13": {
+    "doc": "Entity System",
+    "title": "Implementation Details",
+    "content": "[Documentation to be added] . ",
+    "url": "/dungeoneers-docs/systems/entities/#implementation-details",
+    
+    "relUrl": "/systems/entities/#implementation-details"
+  },"14": {
+    "doc": "Entity System",
+    "title": "Examples",
+    "content": "[Code examples to be added] . ",
+    "url": "/dungeoneers-docs/systems/entities/#examples",
+    
+    "relUrl": "/systems/entities/#examples"
+  },"15": {
+    "doc": "Home",
+    "title": "Dungeoneers Documentation",
+    "content": "Welcome to the official documentation for Dungeoneers. This documentation provides detailed explanations of the game’s core systems and classes. ",
+    "url": "/dungeoneers-docs/#dungeoneers-documentation",
+    
+    "relUrl": "/#dungeoneers-documentation"
+  },"16": {
+    "doc": "Home",
+    "title": "Core Systems",
+    "content": ". | Entities - Base classes and entity management | Abilities &amp; Effects - Skills, spells, and status effects | World Building Tools - Map generation and world creation tools | . ",
+    "url": "/dungeoneers-docs/#core-systems",
+    
+    "relUrl": "/#core-systems"
+  },"17": {
+    "doc": "Home",
+    "title": "Purpose",
+    "content": "This documentation serves as a comprehensive guide to understanding how different systems interact within the Dungeoneers framework. Whether you’re looking to understand the entity system, implement new abilities, or use the world building tools, you’ll find detailed explanations and examples here. ",
+    "url": "/dungeoneers-docs/#purpose",
+    
+    "relUrl": "/#purpose"
+  },"18": {
+    "doc": "Home",
+    "title": "Home",
+    "content": " ",
+    "url": "/dungeoneers-docs/",
+    
+    "relUrl": "/"
+  },"19": {
+    "doc": "World Building Tools",
+    "title": "World Building Tools",
+    "content": " ",
+    "url": "/dungeoneers-docs/systems/world-building/",
+    
+    "relUrl": "/systems/world-building/"
+  },"20": {
+    "doc": "World Building Tools",
+    "title": "Overview",
+    "content": "Tools and systems for generating and managing game worlds. ",
+    "url": "/dungeoneers-docs/systems/world-building/#overview",
+    
+    "relUrl": "/systems/world-building/#overview"
+  },"21": {
+    "doc": "World Building Tools",
+    "title": "Components",
+    "content": ". | World Generator | Map System | Environment Management | . ",
+    "url": "/dungeoneers-docs/systems/world-building/#components",
+    
+    "relUrl": "/systems/world-building/#components"
+  },"22": {
+    "doc": "World Building Tools",
+    "title": "Implementation Details",
+    "content": "[Documentation to be added] . ",
+    "url": "/dungeoneers-docs/systems/world-building/#implementation-details",
+    
+    "relUrl": "/systems/world-building/#implementation-details"
+  },"23": {
+    "doc": "World Building Tools",
+    "title": "Examples",
+    "content": "[Code examples to be added] . ",
+    "url": "/dungeoneers-docs/systems/world-building/#examples",
+    
+    "relUrl": "/systems/world-building/#examples"
+  }
+}
