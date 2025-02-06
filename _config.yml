@@ -43,6 +43,16 @@ footer_content: "Copyright &copy; 2024. Distributed under MIT license."
 markdown: kramdown
 exclude: ["*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
 
+# Custom CSS
+sass:
+  load_paths:
+    - _sass
+  style: compressed
+
+# Include custom CSS
+include:
+  - assets/css/custom.css
+
 # Collections for different documentation sections
 collections:
   gameplay:

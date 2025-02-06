@@ -5,6 +5,8 @@ nav_order: 1
 permalink: /
 ---
 
+![Icon](path/to/icon.png){: .icon}
+
 # Dungeoneers Documentation
 Welcome to the official documentation for Dungeoneers. This documentation provides detailed explanations of the game's core systems and classes.
 
