@@ -33,6 +33,15 @@ Key features:
 
 | Type | Property | Default | Description |
 |------|----------|---------|-------------|
+| bool | [outline_eligible](#outline_eligible) | true | If true, can show selection outline |
+| bool | [is_transparent](#is_transparent) | false | If true, uses transparent materials |
+
+### General Properties
+
+| Type | Property | Default | Description |
+|------|----------|---------|-------------|
+| Entity | [rig_entity](#rig_entity) | null | Reference to owning entity |
+| Array[MeshInstance3D] | [mesh_instances](#mesh_instances) | [] | All mesh instances in rig |
 | Node3D | [hand_slot_right](#hand_slot_right) | null | Right hand attachment point |
 | Node3D | [hand_slot_left](#hand_slot_left) | null | Left hand attachment point |
 | Node3D | [head_slot](#head_slot) | null | Head attachment point |
@@ -41,15 +50,6 @@ Key features:
 | MeshInstance3D | [off_hand](#off_hand) | null | Off hand weapon mesh |
 | GPUParticles3D | [right_hand_cast_vfx](#right_hand_cast_vfx) | null | Right hand casting effects |
 | GPUParticles3D | [left_hand_cast_vfx](#left_hand_cast_vfx) | null | Left hand casting effects |
-| bool | [outline_eligible](#outline_eligible) | true | If true, can show selection outline |
-| bool | [is_transparent](#is_transparent) | false | If true, uses transparent materials |
-
-### General Properties
-
-| Type | Property | Default | Description |
-|------|----------|---------|-------------|
-| Entity | [entity](#entity) | null | Reference to owning entity |
-| Array[MeshInstance3D] | [mesh_instances](#mesh_instances) | [] | All mesh instances in rig |
 | Dictionary | [remote_transforms](#remote_transforms) | {} | Remote transform points |
 | Array[RemoteTransform3D] | [active_remotes](#active_remotes) | [] | Active remote transforms |
 | AnimationPlayer | [animation_player](#animation_player) | null | Animation controller |
@@ -78,7 +78,9 @@ Key features:
 
 | Return Type | Method | Description |
 |------------|---------|-------------|
+| void | [initialize_rig](#initialize_rig) | Initializes the rig |
 | void | [connect_signals](#connect_signals) | Connects entity signals |
+| void | [set_attachment_slots](#set_attachment_slots) | Sets up attachment points |
 | void | [_setup_entity_animation_player](#_setup_entity_animation_player) | Sets up animation system |
 | void | [create_remote_transforms](#create_remote_transforms) | Creates remote transform points |
 | void | [create_remotes_for_slot](#create_remotes_for_slot) | Creates transforms for a slot |
@@ -98,7 +100,240 @@ Key features:
 | void | [start_cast_vfx](#start_cast_vfx) | Starts casting effects |
 | void | [stop_cast_vfx](#stop_cast_vfx) | Stops casting effects |
 
+
+# Property Descriptions
+
+## Exported Properties
+
+#### outline_eligible
+{: #outline_eligible }
+
+bool **outline_eligible** = `true`
+* bool **is_outline_eligible**()
+* void **set_outline_eligible**(value: bool)
+
+Determines if the entity can display selection outlines. Controls visibility of highlight overlays and material effects.
+
+---
+
+#### is_transparent
+{: #is_transparent }
+
+bool **is_transparent** = `false`
+* bool **is_transparent**()
+* void **set_is_transparent**(value: bool)
+
+If true, entity uses transparent materials and special outline handling.
+
+## General Properties
+
+#### rig_entity
+{: #rig_entity }
+
+Entity **rig_entity**
+* Entity **get_rig_entity**()
+* void **set_rig_entity**(value: Entity)
+
+Reference to the entity this rig belongs to. Used for team checks, combat state, and selection handling.
+
+---
+
+#### mesh_instances
+{: #mesh_instances }
+
+Array[MeshInstance3D] **mesh_instances** = `[]`
+* Array[MeshInstance3D] **get_mesh_instances**()
+* void **set_mesh_instances**(value: Array[MeshInstance3D])
+
+Collection of all mesh instances in the rig. Used for material and transparency effects.
+
+---
+
+#### hand_slot_right
+{: #hand_slot_right }
+
+Node3D **hand_slot_right**
+* Node3D **get_hand_slot_right**()
+* void **set_hand_slot_right**(value: Node3D)
+
+Right hand attachment point for weapons and effects.
+
+---
+
+#### hand_slot_left
+{: #hand_slot_left }
+
+Node3D **hand_slot_left**
+* Node3D **get_hand_slot_left**()
+* void **set_hand_slot_left**(value: Node3D)
+
+Left hand attachment point for weapons and effects.
+
+---
+
+#### head_slot
+{: #head_slot }
+
+Node3D **head_slot**
+* Node3D **get_head_slot**()
+* void **set_head_slot**(value: Node3D)
+
+Head attachment point for equipment and effects.
+
+---
+
+#### chest_slot
+{: #chest_slot }
+
+Node3D **chest_slot**
+* Node3D **get_chest_slot**()
+* void **set_chest_slot**(value: Node3D)
+
+Chest attachment point for armor and effects.
+
+---
+
+#### main_hand
+{: #main_hand }
+
+MeshInstance3D **main_hand**
+* MeshInstance3D **get_main_hand**()
+* void **set_main_hand**(value: MeshInstance3D)
+
+Main hand weapon mesh instance.
+
+---
+
+#### off_hand
+{: #off_hand }
+
+MeshInstance3D **off_hand**
+* MeshInstance3D **get_off_hand**()
+* void **set_off_hand**(value: MeshInstance3D)
+
+Off hand weapon mesh instance.
+
+---
+
+#### right_hand_cast_vfx
+{: #right_hand_cast_vfx }
+
+GPUParticles3D **right_hand_cast_vfx**
+* GPUParticles3D **get_right_hand_cast_vfx**()
+* void **set_right_hand_cast_vfx**(value: GPUParticles3D)
+
+Particle effects for right hand casting.
+
+---
+
+#### left_hand_cast_vfx
+{: #left_hand_cast_vfx }
+
+GPUParticles3D **left_hand_cast_vfx**
+* GPUParticles3D **get_left_hand_cast_vfx**()
+* void **set_left_hand_cast_vfx**(value: GPUParticles3D)
+
+Particle effects for left hand casting.
+
+---
+
+#### remote_transforms
+{: #remote_transforms }
+
+Dictionary **remote_transforms** = `{"base": [], "head": [], "chest": [], "hand_right": [], "main_hand": []}`
+* Dictionary **get_remote_transforms**()
+* void **set_remote_transforms**(value: Dictionary)
+
+Collection of remote transform points organized by attachment slot.
+
+---
+
+#### active_remotes
+{: #active_remotes }
+
+Array[RemoteTransform3D] **active_remotes** = `[]`
+* Array[RemoteTransform3D] **get_active_remotes**()
+* void **set_active_remotes**(value: Array[RemoteTransform3D])
+
+Currently active remote transforms being used by effects.
+
+---
+
+#### animation_player
+{: #animation_player }
+
+AnimationPlayer **animation_player** = `null`
+* AnimationPlayer **get_animation_player**()
+* void **set_animation_player**(value: AnimationPlayer)
+
+Controller for entity animations. Set up by child classes.
+
+## Node References
+
+#### skeleton_3d
+{: #skeleton_3d }
+
+Skeleton3D **skeleton_3d**
+* Skeleton3D **get_skeleton_3d**()
+* void **set_skeleton_3d**(value: Skeleton3D)
+
+Reference to entity's main skeleton for animations and attachments.
+
+---
+
+#### hitbox_outline
+{: #hitbox_outline }
+
+Decal **hitbox_outline**
+* Decal **get_hitbox_outline**()
+* void **set_hitbox_outline**(value: Decal)
+
+Combat state hitbox visualization.
+
+---
+
+#### target_marker
+{: #target_marker }
+
+Decal **target_marker**
+* Decal **get_target_marker**()
+* void **set_target_marker**(value: Decal)
+
+Visual indicator for targeted entities.
+
+---
+
+#### selection_marker
+{: #selection_marker }
+
+Decal **selection_marker**
+* Decal **get_selection_marker**()
+* void **set_selection_marker**(value: Decal)
+
+Visual indicator for selected entities.
+
+
 ## Method Descriptions
+
+#### initialize_rig
+{: #initialize_rig }
+
+void **initialize_rig**(entity: Entity)
+
+Initializes the rig with an entity reference.
+
+Parameters:
+* entity: Entity - Entity to initialize rig for
+
+Implementation:
+* Sets rig_entity reference
+* Connects signals
+* Sets up attachment slots
+* Creates remote transforms
+* Builds mesh instances array
+* Sets initial highlight overlay
+
+---
 
 #### connect_signals
 {: #connect_signals }

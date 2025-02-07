@@ -34,6 +34,33 @@ Inherits: [Companion](../companion/)
 | void | [connect_necromancer_signals](#connect_necromancer_signals) | Connects ability signals |
 | void | [_on_ability_use](#_on_ability_use) | Handles ability usage |
 
+## Property Descriptions
+
+### Exported Properties
+
+#### specilization
+{: #specilization }
+
+CompanionDatabase.Acolyte_Specs **specilization**
+* CompanionDatabase.Acolyte_Specs **get_specilization**()
+* void **set_specilization**(value: CompanionDatabase.Acolyte_Specs)
+
+Defines the Acolyte's current specialization path:
+- NECROMANCER: Focus on death magic and minion control
+- BLOODWEAVER: Manipulation of blood and life force
+- WARLOCK: Dark magic and curses
+
+### Node References
+
+#### scythe
+{: #scythe }
+
+MeshInstance3D **scythe**
+* MeshInstance3D **get_scythe**()
+* void **set_scythe**(value: MeshInstance3D)
+
+Reference to the Acolyte's scythe weapon mesh, used for attack animations.
+
 ## Method Descriptions 
 
 #### set_specilization

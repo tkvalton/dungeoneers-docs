@@ -25,6 +25,22 @@ Inherits: [Companion](../companion/)
 | void | [set_specilization](#set_specilization) | Sets specialization type |
 | void | [setup_specilization](#setup_specilization) | Configures spec abilities and role |
 
+## Property Descriptions
+
+### Exported Properties
+
+#### specilization
+{: #specilization }
+
+CompanionDatabase.Druid_Specs **specilization**
+* CompanionDatabase.Druid_Specs **get_specilization**()
+* void **set_specilization**(value: CompanionDatabase.Druid_Specs)
+
+Defines the Druid's current specialization path:
+- GLADEKEEPER: Nature magic healing
+- STORMCALLER: Storm magic, damage dealer
+- SHAPESHIFTER: Animal forms and adaptability tank/damage hybrid
+
 ## Method Descriptions 
 
 #### set_specilization

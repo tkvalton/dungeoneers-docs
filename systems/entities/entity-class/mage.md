@@ -25,6 +25,22 @@ Inherits: [Companion](../companion/)
 | void | [set_specilization](#set_specilization) | Sets specialization type |
 | void | [setup_specilization](#setup_specilization) | Configures spec abilities and role |
 
+## Property Descriptions
+
+### Exported Properties
+
+#### specilization
+{: #specilization }
+
+CompanionDatabase.Mage_Specs **specilization**
+* CompanionDatabase.Mage_Specs **get_specilization**()
+* void **set_specilization**(value: CompanionDatabase.Mage_Specs)
+
+Defines the Mage's current specialization path:
+- PYROMANCER: Fire based magic, damage dealer
+- CRYOMANCER: Ice based magic, damage dealer
+- CHRONOMANCER: Time based magic, healer
+
 ## Method Descriptions 
 
 #### set_specilization

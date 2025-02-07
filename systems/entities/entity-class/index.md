@@ -37,6 +37,37 @@ enum Team:
 - ENEMY = 2 — Hostile to the player
 - NEUTRAL = 3 — Neither friendly nor hostile
 
+# Signals
+
+| Signal | Description |
+|--------|-------------|
+| `entity_taken_damage(damage_taken: int, is_tick_damage: bool, was_crit: bool)` | Emitted when entity receives damage. Includes damage amount and type information |
+| `entity_health_changed(new_health: int)` | Emitted when entity's health value changes |
+| `entity_dodged(damage_dodged: int)` | Emitted when entity successfully dodges an attack |
+| `entity_parried(damage_parried: int)` | Emitted when entity successfully parries an attack |
+| `entity_blocked(damage_blocked: int)` | Emitted when entity successfully blocks damage |
+| `entity_died(entity: Entity)` | Emitted when entity's health reaches 0 and dies |
+| `entity_delt_damage(effect: Effect, target: Variant)` | Emitted when entity successfully deals damage to a target |
+| `entity_heal_cast(effect: Effect, target: Variant)` | Emitted when entity casts a healing effect |
+| `entity_ability_cast(ability: Ability, target: Variant)` | Emitted when entity uses an ability |
+| `entity_basic_attack_cast()` | Emitted when entity performs a basic attack |
+| `entity_critical_hit(effect: Effect, target: Variant)` | Emitted when entity lands a critical hit |
+| `entity_casting()` | Emitted when entity begins casting an ability |
+| `entity_stop_casting()` | Emitted when entity stops or interrupts casting |
+| `entity_resource_changed(new_resource: int)` | Emitted when entity's resource value changes |
+| `entity_stat_changed()` | Emitted when any of entity's stats are modified |
+| `entity_interrupted()` | Emitted when entity's cast or action is interrupted |
+| `target_update(target_name: String)` | Emitted when entity changes targets |
+| `effect_gained(effect: Effect)` | Emitted when entity gains a new effect |
+| `effect_updated(effect: Effect)` | Emitted when an existing effect is modified |
+| `effect_lost(effect: Effect)` | Emitted when an effect expires or is removed |
+| `pet_follow()` | Emitted when entity commands pets to follow |
+| `pet_stop_follow()` | Emitted when entity commands pets to stop following |
+| `action_state_changed(state: String)` | Emitted when entity's action state changes |
+| `movement_state_changed(state: String)` | Emitted when entity's movement state changes |
+| `entity_combat_state_changed(state: int)` | Emitted when entity enters/leaves combat (0: Out of Combat, 1: In Combat) |
+| `entity_selection_state_changed(is_current: bool, is_selected: bool)` | Emitted when entity's selection state changes |
+
 ## Properties
 
 ### Exported Properties

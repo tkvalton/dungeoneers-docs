@@ -75,6 +75,151 @@ Key features:
 | Vector3 | [get_drop_position](#get_drop_position) | Gets item drop position |
 | void | [_on_tree_exiting](#_on_tree_exiting) | Handles cleanup on removal |
 
+## Property Descriptions
+
+### Exported Properties
+
+#### player_class_name
+{: #player_class_name }
+
+CompanionDatabase.Companion_Class **player_class_name**
+* CompanionDatabase.Companion_Class **get_player_class_name**()
+* void **set_player_class_name**(value: CompanionDatabase.Companion_Class)
+
+The companion's class type, determining available abilities and specializations.
+
+---
+
+#### first_stat
+{: #first_stat }
+
+CompanionDatabase.Primary_Stats **first_stat**
+* CompanionDatabase.Primary_Stats **get_first_stat**()
+* void **set_first_stat**(value: CompanionDatabase.Primary_Stats)
+
+Primary attribute for class performance calculations.
+
+---
+
+#### second_stat
+{: #second_stat }
+
+CompanionDatabase.Primary_Stats **second_stat**
+* CompanionDatabase.Primary_Stats **get_second_stat**()
+* void **set_second_stat**(value: CompanionDatabase.Primary_Stats)
+
+Secondary attribute for class performance calculations.
+
+---
+
+#### class_colour
+{: #class_colour }
+
+Color **class_colour**
+* Color **get_class_colour**()
+* void **set_class_colour**(value: Color)
+
+UI color associated with companion's class.
+
+### State Properties
+
+#### experience
+{: #experience }
+
+int **experience**
+* int **get_experience**()
+* void **set_experience**(value: int)
+
+Current experience points accumulated.
+
+---
+
+#### experience_requirement
+{: #experience_requirement }
+
+int **experience_requirement**
+* int **get_experience_requirement**()
+* void **set_experience_requirement**(value: int)
+
+Experience points needed for next level.
+
+---
+
+#### is_current_player
+{: #is_current_player }
+
+bool **is_current_player** = `false`
+* bool **get_is_current_player**()
+* void **set_is_current_player**(value: bool)
+
+Whether this companion is currently player-controlled.
+
+---
+
+#### follow_stance
+{: #follow_stance }
+
+bool **follow_stance** = `false`
+* bool **get_follow_stance**()
+* void **set_follow_stance**(value: bool)
+
+AI state for following player.
+
+---
+
+#### attack_stance
+{: #attack_stance }
+
+bool **attack_stance** = `true`
+* bool **get_attack_stance**()
+* void **set_attack_stance**(value: bool)
+
+AI state for combat engagement.
+
+---
+
+#### interaction_range
+{: #interaction_range }
+
+float **interaction_range** = `3.5`
+* float **get_interaction_range**()
+* void **set_interaction_range**(value: float)
+
+Maximum distance for interacting with objects.
+
+---
+
+#### role
+{: #role }
+
+CompanionDatabase.Spec_Role **role**
+* CompanionDatabase.Spec_Role **get_role**()
+* void **set_role**(value: CompanionDatabase.Spec_Role)
+
+Current combat role based on specialization.
+
+### Node References
+
+#### interact_ray
+{: #interact_ray }
+
+RayCast3D **interact_ray**
+* RayCast3D **get_interact_ray**()
+* void **set_interact_ray**(value: RayCast3D)
+
+Raycast for detecting interactive objects.
+
+---
+
+#### drop_location
+{: #drop_location }
+
+Marker3D **drop_location**
+* Marker3D **get_drop_location**()
+* void **set_drop_location**(value: Marker3D)
+
+Position marker for item drops.
+
 ## Method Descriptions
 
 #### _ready
