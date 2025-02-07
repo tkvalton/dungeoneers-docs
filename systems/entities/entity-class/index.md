@@ -11,23 +11,23 @@ permalink: /systems/entities/entity-class/
 
 Inherits: [CharacterBody3D](https://docs.godotengine.org/en/stable/classes/class_characterbody3d.html)
 
-## Child Classes
-- [Companion](./companion.md)
-- [Minion](./minion.md)
-- [Boss](./boss.md)
-- [Pet](./pet.md)
-
 ## Description
 
 Entity is the base class for all characters and creatures in the game world. It provides core functionality for movement, combat, stats management, and interaction with the game's systems. This class serves as the foundation for both player-controlled characters and AI-driven entities.
 
-Key features:
+Key features:a
 - Manages entity stats, health, and resources
 - Handles movement and physics interactions
 - Provides a framework for combat mechanics including damage and healing
 - Manages effects, abilities, and status conditions
 - Integrates with the game's AI and targeting systems
 - Supports various entity types (Companion, Minion, Boss, NPC)
+
+## Child Classes
+- [Companion](./companion.md)
+- [Minion](./minion.md)
+- [Boss](./boss.md)
+- [Pet](./pet.md)
 
 ## Enumerations
 
